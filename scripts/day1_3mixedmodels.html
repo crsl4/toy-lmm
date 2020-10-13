@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<HTML lang = "en">
+<HEAD>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  
+  
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+  </script>
+
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  
+<style>
+pre.hljl {
+    border: 1px solid #ccc;
+    margin: 5px;
+    padding: 5px;
+    overflow-x: auto;
+    color: rgb(68,68,68); background-color: rgb(251,251,251); }
+pre.hljl > span.hljl-t { }
+pre.hljl > span.hljl-w { }
+pre.hljl > span.hljl-e { }
+pre.hljl > span.hljl-eB { }
+pre.hljl > span.hljl-o { }
+pre.hljl > span.hljl-k { color: rgb(148,91,176); font-weight: bold; }
+pre.hljl > span.hljl-kc { color: rgb(59,151,46); font-style: italic; }
+pre.hljl > span.hljl-kd { color: rgb(214,102,97); font-style: italic; }
+pre.hljl > span.hljl-kn { color: rgb(148,91,176); font-weight: bold; }
+pre.hljl > span.hljl-kp { color: rgb(148,91,176); font-weight: bold; }
+pre.hljl > span.hljl-kr { color: rgb(148,91,176); font-weight: bold; }
+pre.hljl > span.hljl-kt { color: rgb(148,91,176); font-weight: bold; }
+pre.hljl > span.hljl-n { }
+pre.hljl > span.hljl-na { }
+pre.hljl > span.hljl-nb { }
+pre.hljl > span.hljl-nbp { }
+pre.hljl > span.hljl-nc { }
+pre.hljl > span.hljl-ncB { }
+pre.hljl > span.hljl-nd { color: rgb(214,102,97); }
+pre.hljl > span.hljl-ne { }
+pre.hljl > span.hljl-neB { }
+pre.hljl > span.hljl-nf { color: rgb(66,102,213); }
+pre.hljl > span.hljl-nfm { color: rgb(66,102,213); }
+pre.hljl > span.hljl-np { }
+pre.hljl > span.hljl-nl { }
+pre.hljl > span.hljl-nn { }
+pre.hljl > span.hljl-no { }
+pre.hljl > span.hljl-nt { }
+pre.hljl > span.hljl-nv { }
+pre.hljl > span.hljl-nvc { }
+pre.hljl > span.hljl-nvg { }
+pre.hljl > span.hljl-nvi { }
+pre.hljl > span.hljl-nvm { }
+pre.hljl > span.hljl-l { }
+pre.hljl > span.hljl-ld { color: rgb(148,91,176); font-style: italic; }
+pre.hljl > span.hljl-s { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sa { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sb { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sc { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sd { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sdB { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sdC { color: rgb(201,61,57); }
+pre.hljl > span.hljl-se { color: rgb(59,151,46); }
+pre.hljl > span.hljl-sh { color: rgb(201,61,57); }
+pre.hljl > span.hljl-si { }
+pre.hljl > span.hljl-so { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sr { color: rgb(201,61,57); }
+pre.hljl > span.hljl-ss { color: rgb(201,61,57); }
+pre.hljl > span.hljl-ssB { color: rgb(201,61,57); }
+pre.hljl > span.hljl-nB { color: rgb(59,151,46); }
+pre.hljl > span.hljl-nbB { color: rgb(59,151,46); }
+pre.hljl > span.hljl-nfB { color: rgb(59,151,46); }
+pre.hljl > span.hljl-nh { color: rgb(59,151,46); }
+pre.hljl > span.hljl-ni { color: rgb(59,151,46); }
+pre.hljl > span.hljl-nil { color: rgb(59,151,46); }
+pre.hljl > span.hljl-noB { color: rgb(59,151,46); }
+pre.hljl > span.hljl-oB { color: rgb(102,102,102); font-weight: bold; }
+pre.hljl > span.hljl-ow { color: rgb(102,102,102); font-weight: bold; }
+pre.hljl > span.hljl-p { }
+pre.hljl > span.hljl-c { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-ch { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-cm { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-cp { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-cpB { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-cs { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-csB { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-g { }
+pre.hljl > span.hljl-gd { }
+pre.hljl > span.hljl-ge { }
+pre.hljl > span.hljl-geB { }
+pre.hljl > span.hljl-gh { }
+pre.hljl > span.hljl-gi { }
+pre.hljl > span.hljl-go { }
+pre.hljl > span.hljl-gp { }
+pre.hljl > span.hljl-gs { }
+pre.hljl > span.hljl-gsB { }
+pre.hljl > span.hljl-gt { }
+</style>
+
+
+
+  <style type="text/css">
+  @font-face {
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+}
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  font-family: monospace, monospace;
+  font-size : 0.8em;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+thead th {
+    border-bottom: 1px solid black;
+    background-color: white;
+}
+tr:nth-child(odd){
+  background-color: rgb(248,248,248);
+}
+
+
+/*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+*/
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; }
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box; }
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0; }
+}
+@media (min-width: 550px) {
+  .container {
+    width: 80%; }
+  .column,
+  .columns {
+    margin-left: 4%; }
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
+
+  .one.column,
+  .one.columns                    { width: 4.66666666667%; }
+  .two.columns                    { width: 13.3333333333%; }
+  .three.columns                  { width: 22%;            }
+  .four.columns                   { width: 30.6666666667%; }
+  .five.columns                   { width: 39.3333333333%; }
+  .six.columns                    { width: 48%;            }
+  .seven.columns                  { width: 56.6666666667%; }
+  .eight.columns                  { width: 65.3333333333%; }
+  .nine.columns                   { width: 74.0%;          }
+  .ten.columns                    { width: 82.6666666667%; }
+  .eleven.columns                 { width: 91.3333333333%; }
+  .twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .one-third.column               { width: 30.6666666667%; }
+  .two-thirds.column              { width: 65.3333333333%; }
+
+  .one-half.column                { width: 48%; }
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .offset-by-two.column,
+  .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .offset-by-three.column,
+  .offset-by-three.columns        { margin-left: 26%;            }
+  .offset-by-four.column,
+  .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .offset-by-five.column,
+  .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .offset-by-six.column,
+  .offset-by-six.columns          { margin-left: 52%;            }
+  .offset-by-seven.column,
+  .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .offset-by-eight.column,
+  .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .offset-by-nine.column,
+  .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .offset-by-ten.column,
+  .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.columns     { margin-left: 52%; }
+
+}
+html {
+  font-size: 62.5%; }
+body {
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222; }
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 300; }
+h1 { font-size: 3.6rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 3.4rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 3.2rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 2.8rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 2.4rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+
+p {
+  margin-top: 0; }
+a {
+  color: #1EAEDB; }
+a:hover {
+  color: #0FA0CE; }
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box; }
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0; }
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #33C3F0;
+  border-color: #33C3F0; }
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB; }
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; }
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px; }
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #33C3F0;
+  outline: 0; }
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+fieldset {
+  padding: 0;
+  border-width: 0; }
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
+ul {
+  list-style: circle; }
+ol {
+  list-style: decimal; }
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%; }
+li > p {margin : 0;}
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1; }
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+button,
+.button {
+  margin-bottom: 1rem; }
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem; }
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 1.0rem; }
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box; }
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box; }
+.u-pull-right {
+  float: right; }
+.u-pull-left {
+  float: left; }
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid #E1E1E1; }
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
+
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  word-break: break-all;
+  word-wrap: break-word;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+pre.hljl {
+  margin: 0 0 10px;
+  display: block;
+  background: #f5f5f5;
+  border-radius: 4px;
+  padding : 5px;
+}
+
+pre.output {
+  background: #ffffff;
+}
+
+pre.code {
+  background: #ffffff;
+}
+
+pre.julia-error {
+  color : red
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 0.9em;
+}
+
+
+@media (min-width: 400px) {}
+@media (min-width: 550px) {}
+@media (min-width: 750px) {}
+@media (min-width: 1000px) {}
+@media (min-width: 1200px) {}
+
+h1.title {margin-top : 20px}
+img {max-width : 100%}
+div.title {text-align: center;}
+
+  </style>
+</HEAD>
+
+<BODY>
+  <div class ="container">
+    <div class = "row">
+      <div class = "col-md-12 twelve columns">
+        <div class="title">
+          
+          
+          
+        </div>
+
+        <h1>Running LMM in Julia</h1>
+<p>You can weave this document as html or pdf:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-k'>using</span><span class='hljl-t'> </span><span class='hljl-n'>Weave</span><span class='hljl-t'>
+</span><span class='hljl-nf'>weave</span><span class='hljl-p'>(</span><span class='hljl-s'>&quot;day1_3mixedmodels.jmd&quot;</span><span class='hljl-p'>)</span><span class='hljl-t'>        </span><span class='hljl-cs'># for an html output</span><span class='hljl-t'>
+</span><span class='hljl-nf'>weave</span><span class='hljl-p'>(</span><span class='hljl-s'>&quot;day1_3mixedmodels.jmd&quot;</span><span class='hljl-p'>,</span><span class='hljl-t'>
+      </span><span class='hljl-n'>doctype</span><span class='hljl-oB'>=</span><span class='hljl-s'>&quot;pandoc2pdf&quot;</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>fig_ext</span><span class='hljl-oB'>=</span><span class='hljl-s'>&quot;.pdf&quot;</span><span class='hljl-p'>)</span><span class='hljl-t'>  </span><span class='hljl-cs'># for a pdf output</span>
+</pre>
+
+
+<p>Setting up the project:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-k'>using</span><span class='hljl-t'> </span><span class='hljl-n'>DrWatson</span><span class='hljl-t'>
+</span><span class='hljl-nd'>@quickactivate</span><span class='hljl-t'>
+</span><span class='hljl-k'>using</span><span class='hljl-t'> </span><span class='hljl-n'>DataFrames</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>JellyMe4</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>MixedModels</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>RCall</span>
+</pre>
+
+
+
+<h2>Data from a study on sleep deprivation</h2>
+<p>Belenky et al. &#40;2003&#41; conducted an experiment to measure the  effect of sleep deprivation on cognitive performance. There were 18 subjects, chosen from the population of interest &#40;long-distance truck drivers&#41;, in the 10 day trial. These subjects were  restricted to 3 hours sleep per night during the trial.</p>
+<p>On each day of the trial each subject&#39;s reaction time was measured. The reaction time shown here is the average of several measurements.</p>
+<p>These data are <em>balanced</em> in that each subject is measured the same number of times and on the same occasions.</p>
+<p>Load the data:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>sleepstudy</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>DataFrame</span><span class='hljl-p'>(</span><span class='hljl-n'>MixedModels</span><span class='hljl-oB'>.</span><span class='hljl-nf'>dataset</span><span class='hljl-p'>(</span><span class='hljl-sc'>:sleepstudy</span><span class='hljl-p'>));</span><span class='hljl-t'>
+</span><span class='hljl-nf'>describe</span><span class='hljl-p'>(</span><span class='hljl-n'>sleepstudy</span><span class='hljl-p'>)</span>
+</pre>
+
+
+
+<table class="data-frame"><thead><tr><th></th><th>variable</th><th>mean</th><th>min</th><th>median</th><th>max</th><th>nunique</th><th>nmissing</th><th>eltype</th></tr><tr><th></th><th>Symbol</th><th>Union…</th><th>Any</th><th>Union…</th><th>Any</th><th>Union…</th><th>Nothing</th><th>DataType</th></tr></thead><tbody><p>3 rows × 8 columns</p><tr><th>1</th><td>subj</td><td></td><td>S308</td><td></td><td>S372</td><td>18</td><td></td><td>String</td></tr><tr><th>2</th><td>days</td><td>4.5</td><td>0</td><td>4.5</td><td>9</td><td></td><td></td><td>Int8</td></tr><tr><th>3</th><td>reaction</td><td>298.508</td><td>194.332</td><td>288.651</td><td>466.353</td><td></td><td></td><td>Float64</td></tr></tbody></table>
+
+<p>and plot the data using the <em>lattice</em> package in R</p>
+<p>Load the <code>lattice</code> package in <code>R</code> and set the graphics device to SVG &#40;scalable vector graphics&#41;.</p>
+
+
+<pre class='hljl'>
+<span class='hljl-so'>R&quot;&quot;&quot;
+require(&quot;ggplot2&quot;, quietly=TRUE)
+require(&quot;lattice&quot;, quietly=TRUE)
+require(&quot;lme4&quot;, quietly=TRUE)
+&quot;&quot;&quot;</span><span class='hljl-p'>;</span><span class='hljl-t'>
+</span><span class='hljl-n'>RCall</span><span class='hljl-oB'>.</span><span class='hljl-nf'>ijulia_setdevice</span><span class='hljl-p'>(</span><span class='hljl-nf'>MIME</span><span class='hljl-p'>(</span><span class='hljl-s'>&quot;image/svg+xml&quot;</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-n'>width</span><span class='hljl-oB'>=</span><span class='hljl-ni'>6</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>height</span><span class='hljl-oB'>=</span><span class='hljl-nfB'>3.5</span><span class='hljl-p'>)</span>
+</pre>
+
+
+
+<p>Transfer the Julia <code>DataFrame</code> to an R <code>data.frame</code> with the same name</p>
+
+
+<pre class='hljl'>
+<span class='hljl-nd'>@rput</span><span class='hljl-t'> </span><span class='hljl-n'>sleepstudy</span><span class='hljl-p'>;</span>
+</pre>
+
+
+
+<p>and produce the plot</p>
+
+
+<pre class='hljl'>
+<span class='hljl-so'>R&quot;&quot;&quot;
+xy &lt;- xyplot(
+    reaction ~ days | subj, sleepstudy, aspect = &quot;xy&quot;,
+    layout = c(9,2), type = c(&quot;g&quot;, &quot;p&quot;, &quot;r&quot;),
+    index.cond = function(x,y) coef(lm(y ~ x))[1],
+    xlab = &quot;Days of sleep deprivation&quot;,
+    ylab = &quot;Average reaction time (ms)&quot;
+)
+&quot;&quot;&quot;</span>
+</pre>
+
+
+<pre class="output">
+RCall.RObject&#123;RCall.VecSxp&#125;
+</pre>
+
+
+<p>Suppose we wish to evaluate the coefficients of the within-subject regressions. For each subject the <code>days</code> column is the <code>x</code> in the regression and the <code>reaction</code> column is the <code>y</code>. We create the model matrix using <code>hcat</code> &#40;horizontal concatenate&#41;, which is the Julia analogue of R&#39;s <code>cbind</code>.</p>
+
+
+<pre class='hljl'>
+<span class='hljl-k'>let</span><span class='hljl-t'> </span><span class='hljl-n'>days</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-oB'>:</span><span class='hljl-ni'>9</span><span class='hljl-t'>
+    </span><span class='hljl-nf'>hcat</span><span class='hljl-p'>(</span><span class='hljl-nf'>ones</span><span class='hljl-p'>(</span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-n'>days</span><span class='hljl-p'>)),</span><span class='hljl-t'> </span><span class='hljl-n'>days</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span>
+</pre>
+
+
+<pre class="output">
+10×2 Array&#123;Float64,2&#125;:
+ 1.0  0.0
+ 1.0  1.0
+ 1.0  2.0
+ 1.0  3.0
+ 1.0  4.0
+ 1.0  5.0
+ 1.0  6.0
+ 1.0  7.0
+ 1.0  8.0
+ 1.0  9.0
+</pre>
+
+
+<p>and use the backslash operator to evaluate the coefficients.</p>
+<p>Putting this together looks like</p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>withinsubj</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>combine</span><span class='hljl-p'>(</span><span class='hljl-nf'>groupby</span><span class='hljl-p'>(</span><span class='hljl-n'>sleepstudy</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-sc'>:subj</span><span class='hljl-p'>))</span><span class='hljl-t'> </span><span class='hljl-k'>do</span><span class='hljl-t'> </span><span class='hljl-n'>sdf</span><span class='hljl-t'>
+    </span><span class='hljl-n'>days</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>sdf</span><span class='hljl-oB'>.</span><span class='hljl-n'>days</span><span class='hljl-t'>
+    </span><span class='hljl-n'>X</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>hcat</span><span class='hljl-p'>(</span><span class='hljl-nf'>ones</span><span class='hljl-p'>(</span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-n'>days</span><span class='hljl-p'>)),</span><span class='hljl-t'> </span><span class='hljl-n'>days</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>coefs</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>X</span><span class='hljl-t'> </span><span class='hljl-oB'>\</span><span class='hljl-t'> </span><span class='hljl-n'>sdf</span><span class='hljl-oB'>.</span><span class='hljl-n'>reaction</span><span class='hljl-t'>
+    </span><span class='hljl-p'>(</span><span class='hljl-n'>intercept</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>first</span><span class='hljl-p'>(</span><span class='hljl-n'>coefs</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-n'>slope</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>last</span><span class='hljl-p'>(</span><span class='hljl-n'>coefs</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span>
+</pre>
+
+
+
+<table class="data-frame"><thead><tr><th></th><th>subj</th><th>intercept</th><th>slope</th></tr><tr><th></th><th>String</th><th>Float64</th><th>Float64</th></tr></thead><tbody><p>18 rows × 3 columns</p><tr><th>1</th><td>S308</td><td>244.193</td><td>21.7647</td></tr><tr><th>2</th><td>S309</td><td>205.055</td><td>2.26179</td></tr><tr><th>3</th><td>S310</td><td>203.484</td><td>6.1149</td></tr><tr><th>4</th><td>S330</td><td>289.685</td><td>3.00807</td></tr><tr><th>5</th><td>S331</td><td>285.739</td><td>5.26602</td></tr><tr><th>6</th><td>S332</td><td>264.252</td><td>9.56677</td></tr><tr><th>7</th><td>S333</td><td>275.019</td><td>9.14205</td></tr><tr><th>8</th><td>S334</td><td>240.163</td><td>12.2531</td></tr><tr><th>9</th><td>S335</td><td>263.035</td><td>-2.88103</td></tr><tr><th>10</th><td>S337</td><td>290.104</td><td>19.026</td></tr><tr><th>11</th><td>S349</td><td>215.112</td><td>13.4939</td></tr><tr><th>12</th><td>S350</td><td>225.835</td><td>19.504</td></tr><tr><th>13</th><td>S351</td><td>261.147</td><td>6.4335</td></tr><tr><th>14</th><td>S352</td><td>276.372</td><td>13.5665</td></tr><tr><th>15</th><td>S369</td><td>254.968</td><td>11.3481</td></tr><tr><th>16</th><td>S370</td><td>210.449</td><td>18.0562</td></tr><tr><th>17</th><td>S371</td><td>253.636</td><td>9.18844</td></tr><tr><th>18</th><td>S372</td><td>267.045</td><td>11.2981</td></tr></tbody></table>
+
+<p>The advantage of using this formulation is that it is easy to extend the quantities being evaluated and returned. Suppose we wish to return the sum of squared residuals in addition to the coefficient estimates.</p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>withinsubj</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>combine</span><span class='hljl-p'>(</span><span class='hljl-nf'>groupby</span><span class='hljl-p'>(</span><span class='hljl-n'>sleepstudy</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-sc'>:subj</span><span class='hljl-p'>))</span><span class='hljl-t'> </span><span class='hljl-k'>do</span><span class='hljl-t'> </span><span class='hljl-n'>sdf</span><span class='hljl-t'>
+    </span><span class='hljl-n'>days</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>rt</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>sdf</span><span class='hljl-oB'>.</span><span class='hljl-n'>days</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>sdf</span><span class='hljl-oB'>.</span><span class='hljl-n'>reaction</span><span class='hljl-t'>
+    </span><span class='hljl-n'>X</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>hcat</span><span class='hljl-p'>(</span><span class='hljl-nf'>ones</span><span class='hljl-p'>(</span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-n'>days</span><span class='hljl-p'>)),</span><span class='hljl-t'> </span><span class='hljl-n'>days</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>coefs</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>X</span><span class='hljl-t'> </span><span class='hljl-oB'>\</span><span class='hljl-t'> </span><span class='hljl-n'>rt</span><span class='hljl-t'>
+    </span><span class='hljl-n'>dfr</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-n'>days</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-t'>  </span><span class='hljl-cs'># degrees of freedom for residuals</span><span class='hljl-t'>
+    </span><span class='hljl-n'>ssr</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>sum</span><span class='hljl-p'>(</span><span class='hljl-n'>abs2</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>rt</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>X</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-n'>coefs</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-cs'># sum of squared residuals</span><span class='hljl-t'>
+    </span><span class='hljl-p'>(</span><span class='hljl-n'>intercept</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>first</span><span class='hljl-p'>(</span><span class='hljl-n'>coefs</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-n'>slope</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>last</span><span class='hljl-p'>(</span><span class='hljl-n'>coefs</span><span class='hljl-p'>),</span><span class='hljl-t'>
+    </span><span class='hljl-n'>ssr</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>ssr</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>dfr</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>dfr</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>s</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>sqrt</span><span class='hljl-p'>(</span><span class='hljl-n'>ssr</span><span class='hljl-t'> </span><span class='hljl-oB'>/</span><span class='hljl-t'> </span><span class='hljl-n'>dfr</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span>
+</pre>
+
+
+
+<table class="data-frame"><thead><tr><th></th><th>subj</th><th>intercept</th><th>slope</th><th>ssr</th><th>dfr</th><th>s</th></tr><tr><th></th><th>String</th><th>Float64</th><th>Float64</th><th>Float64</th><th>Int64</th><th>Float64</th></tr></thead><tbody><p>18 rows × 6 columns</p><tr><th>1</th><td>S308</td><td>244.193</td><td>21.7647</td><td>18263.2</td><td>8</td><td>47.7797</td></tr><tr><th>2</th><td>S309</td><td>205.055</td><td>2.26179</td><td>630.089</td><td>8</td><td>8.87474</td></tr><tr><th>3</th><td>S310</td><td>203.484</td><td>6.1149</td><td>1214.32</td><td>8</td><td>12.3203</td></tr><tr><th>4</th><td>S330</td><td>289.685</td><td>3.00807</td><td>3976.98</td><td>8</td><td>22.2962</td></tr><tr><th>5</th><td>S331</td><td>285.739</td><td>5.26602</td><td>4391.63</td><td>8</td><td>23.4298</td></tr><tr><th>6</th><td>S332</td><td>264.252</td><td>9.56677</td><td>29666.8</td><td>8</td><td>60.8963</td></tr><tr><th>7</th><td>S333</td><td>275.019</td><td>9.14205</td><td>1241.77</td><td>8</td><td>12.4588</td></tr><tr><th>8</th><td>S334</td><td>240.163</td><td>12.2531</td><td>3380.52</td><td>8</td><td>20.5564</td></tr><tr><th>9</th><td>S335</td><td>263.035</td><td>-2.88103</td><td>1037.6</td><td>8</td><td>11.3886</td></tr><tr><th>10</th><td>S337</td><td>290.104</td><td>19.026</td><td>2130.98</td><td>8</td><td>16.3209</td></tr><tr><th>11</th><td>S349</td><td>215.112</td><td>13.4939</td><td>1570.89</td><td>8</td><td>14.0129</td></tr><tr><th>12</th><td>S350</td><td>225.835</td><td>19.504</td><td>4747.49</td><td>8</td><td>24.3606</td></tr><tr><th>13</th><td>S351</td><td>261.147</td><td>6.4335</td><td>4143.28</td><td>8</td><td>22.7576</td></tr><tr><th>14</th><td>S352</td><td>276.372</td><td>13.5665</td><td>5209.65</td><td>8</td><td>25.5187</td></tr><tr><th>15</th><td>S369</td><td>254.968</td><td>11.3481</td><td>2005.24</td><td>8</td><td>15.8321</td></tr><tr><th>16</th><td>S370</td><td>210.449</td><td>18.0562</td><td>4653.48</td><td>8</td><td>24.1182</td></tr><tr><th>17</th><td>S371</td><td>253.636</td><td>9.18844</td><td>5028.91</td><td>8</td><td>25.0722</td></tr><tr><th>18</th><td>S372</td><td>267.045</td><td>11.2981</td><td>1018.63</td><td>8</td><td>11.284</td></tr></tbody></table>
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>describe</span><span class='hljl-p'>(</span><span class='hljl-n'>withinsubj</span><span class='hljl-p'>)</span>
+</pre>
+
+
+
+<table class="data-frame"><thead><tr><th></th><th>variable</th><th>mean</th><th>min</th><th>median</th><th>max</th><th>nunique</th><th>nmissing</th><th>eltype</th></tr><tr><th></th><th>Symbol</th><th>Union…</th><th>Any</th><th>Union…</th><th>Any</th><th>Union…</th><th>Nothing</th><th>DataType</th></tr></thead><tbody><p>6 rows × 8 columns</p><tr><th>1</th><td>subj</td><td></td><td>S308</td><td></td><td>S372</td><td>18</td><td></td><td>String</td></tr><tr><th>2</th><td>intercept</td><td>251.405</td><td>203.484</td><td>258.058</td><td>290.104</td><td></td><td></td><td>Float64</td></tr><tr><th>3</th><td>slope</td><td>10.4673</td><td>-2.88103</td><td>10.4324</td><td>21.7647</td><td></td><td></td><td>Float64</td></tr><tr><th>4</th><td>ssr</td><td>5239.53</td><td>630.089</td><td>3678.75</td><td>29666.8</td><td></td><td></td><td>Float64</td></tr><tr><th>5</th><td>dfr</td><td>8.0</td><td>8</td><td>8.0</td><td>8</td><td></td><td></td><td>Int64</td></tr><tr><th>6</th><td>s</td><td>22.1821</td><td>8.87474</td><td>21.4263</td><td>60.8963</td><td></td><td></td><td>Float64</td></tr></tbody></table>
+
+<p>In most cases a simple linear regression provides an adequate fit to the within-subject data.  Patterns for some subjects &#40;e.g. 350, 352 and 371&#41; deviate from linearity but the deviations are neither widespread nor consistent in form.</p>
+<p>There is considerable variation in the intercept &#40;estimated reaction time without sleep deprivation&#41; across subjects – 200 ms. up to 300 ms. – and in the slope &#40;increase in reaction time per day of sleep deprivation&#41; – 0 ms./day up to 20 ms./day. Also there is considerable variability in the quality of the fit as measured by <code>s</code>, the estimate of <code>σ</code>, which ranges from about 9 to over 60 ms.</p>
+<h2>Fit a linear mixed-effects model</h2>
+<p>Begin with a linear mixed-effects model with fixed effects for intercept and slope &#40;w.r.t. <code>days</code>&#41; and by-subject random effects for intercept and slope. By default the slope and intercept random effects are correlated within subject.</p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>f1</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'>  </span><span class='hljl-nd'>@formula</span><span class='hljl-p'>(</span><span class='hljl-n'>reaction</span><span class='hljl-t'> </span><span class='hljl-oB'>~</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-n'>days</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-ni'>1</span><span class='hljl-oB'>+</span><span class='hljl-n'>days</span><span class='hljl-oB'>|</span><span class='hljl-n'>subj</span><span class='hljl-p'>));</span><span class='hljl-t'>
+</span><span class='hljl-n'>m1</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>fit</span><span class='hljl-p'>(</span><span class='hljl-n'>MixedModel</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>f1</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>sleepstudy</span><span class='hljl-p'>)</span>
+</pre>
+
+
+<pre class="output">
+Linear mixed model fit by maximum likelihood
+ reaction ~ 1 &#43; days &#43; &#40;1 &#43; days | subj&#41;
+   logLik   -2 logLik     AIC       AICc        BIC    
+  -875.9697  1751.9393  1763.9393  1764.4249  1783.0971
+
+Variance components:
+            Column   Variance Std.Dev.   Corr.
+subj     &#40;Intercept&#41;  565.5107 23.78047
+         days          32.6821  5.71683 &#43;0.08
+Residual              654.9414 25.59182
+ Number of obs: 180; levels of grouping factors: 18
+
+  Fixed-effects parameters:
+──────────────────────────────────────────────────
+                Coef.  Std. Error      z  Pr&#40;&gt;|z|&#41;
+──────────────────────────────────────────────────
+&#40;Intercept&#41;  251.405      6.63226  37.91    &lt;1e-99
+days          10.4673     1.50224   6.97    &lt;1e-11
+──────────────────────────────────────────────────
+</pre>
+
+
+<p>The random-effects &quot;estimates&quot; &#40;technically, these are the conditional means of the random effects given the observed data&#41; can be obtained as</p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>ranefvals</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>DataFrame</span><span class='hljl-p'>(</span><span class='hljl-nf'>only</span><span class='hljl-p'>(</span><span class='hljl-nf'>raneftables</span><span class='hljl-p'>(</span><span class='hljl-n'>m1</span><span class='hljl-p'>)))</span>
+</pre>
+
+
+
+<table class="data-frame"><thead><tr><th></th><th>subj</th><th>(Intercept)</th><th>days</th></tr><tr><th></th><th>String</th><th>Float64</th><th>Float64</th></tr></thead><tbody><p>18 rows × 3 columns</p><tr><th>1</th><td>S308</td><td>2.81582</td><td>9.07551</td></tr><tr><th>2</th><td>S309</td><td>-40.0484</td><td>-8.64408</td></tr><tr><th>3</th><td>S310</td><td>-38.4331</td><td>-5.5134</td></tr><tr><th>4</th><td>S330</td><td>22.8321</td><td>-4.65872</td></tr><tr><th>5</th><td>S331</td><td>21.5498</td><td>-2.94449</td></tr><tr><th>6</th><td>S332</td><td>8.81554</td><td>-0.235201</td></tr><tr><th>7</th><td>S333</td><td>16.4419</td><td>-0.158809</td></tr><tr><th>8</th><td>S334</td><td>-6.99667</td><td>1.03273</td></tr><tr><th>9</th><td>S335</td><td>-1.03759</td><td>-10.5994</td></tr><tr><th>10</th><td>S337</td><td>34.6663</td><td>8.63238</td></tr><tr><th>11</th><td>S349</td><td>-24.558</td><td>1.06438</td></tr><tr><th>12</th><td>S350</td><td>-12.3345</td><td>6.47168</td></tr><tr><th>13</th><td>S351</td><td>4.274</td><td>-2.95533</td></tr><tr><th>14</th><td>S352</td><td>20.6222</td><td>3.56171</td></tr><tr><th>15</th><td>S369</td><td>3.25854</td><td>0.871711</td></tr><tr><th>16</th><td>S370</td><td>-24.7101</td><td>4.6597</td></tr><tr><th>17</th><td>S371</td><td>0.723262</td><td>-0.971053</td></tr><tr><th>18</th><td>S372</td><td>12.1189</td><td>1.3107</td></tr></tbody></table>
+
+<p>To put these on the same scale as the by-subject regression coefficients we add in the fixed-effects estimates.</p>
+
+
+<pre class='hljl'>
+<span class='hljl-k'>let</span><span class='hljl-t'> </span><span class='hljl-n'>fe</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>fixef</span><span class='hljl-p'>(</span><span class='hljl-n'>m1</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>ranefvals</span><span class='hljl-p'>[</span><span class='hljl-ni'>2</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>.+=</span><span class='hljl-t'> </span><span class='hljl-n'>fe</span><span class='hljl-p'>[</span><span class='hljl-ni'>1</span><span class='hljl-p'>]</span><span class='hljl-t'>
+    </span><span class='hljl-n'>ranefvals</span><span class='hljl-p'>[</span><span class='hljl-ni'>3</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>.+=</span><span class='hljl-t'> </span><span class='hljl-n'>fe</span><span class='hljl-p'>[</span><span class='hljl-ni'>2</span><span class='hljl-p'>]</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span><span class='hljl-p'>;</span><span class='hljl-t'>
+</span><span class='hljl-nf'>describe</span><span class='hljl-p'>(</span><span class='hljl-n'>ranefvals</span><span class='hljl-p'>)</span>
+</pre>
+
+
+
+<table class="data-frame"><thead><tr><th></th><th>variable</th><th>mean</th><th>min</th><th>median</th><th>max</th><th>nunique</th><th>nmissing</th><th>eltype</th></tr><tr><th></th><th>Symbol</th><th>Union…</th><th>Any</th><th>Union…</th><th>Any</th><th>Union…</th><th>Nothing</th><th>DataType</th></tr></thead><tbody><p>3 rows × 8 columns</p><tr><th>1</th><td>subj</td><td></td><td>S308</td><td></td><td>S372</td><td>18</td><td></td><td>String</td></tr><tr><th>2</th><td>(Intercept)</td><td>251.405</td><td>211.357</td><td>254.442</td><td>286.071</td><td></td><td></td><td>Float64</td></tr><tr><th>3</th><td>days</td><td>10.4673</td><td>-0.13213</td><td>10.8237</td><td>19.5428</td><td></td><td></td><td>Float64</td></tr></tbody></table>
+
+<p>and combine these values with the within-subject estimates</p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>coefs</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>innerjoin</span><span class='hljl-p'>(</span><span class='hljl-n'>ranefvals</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>withinsubj</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>on</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-sc'>:subj</span><span class='hljl-p'>);</span><span class='hljl-t'>
+</span><span class='hljl-nd'>@rput</span><span class='hljl-t'> </span><span class='hljl-n'>coefs</span>
+</pre>
+
+
+
+<table class="data-frame"><thead><tr><th></th><th>subj</th><th>(Intercept)</th><th>days</th><th>intercept</th><th>slope</th><th>ssr</th><th>dfr</th><th>s</th></tr><tr><th></th><th>String</th><th>Float64</th><th>Float64</th><th>Float64</th><th>Float64</th><th>Float64</th><th>Int64</th><th>Float64</th></tr></thead><tbody><p>18 rows × 8 columns</p><tr><th>1</th><td>S308</td><td>254.221</td><td>19.5428</td><td>244.193</td><td>21.7647</td><td>18263.2</td><td>8</td><td>47.7797</td></tr><tr><th>2</th><td>S309</td><td>211.357</td><td>1.82321</td><td>205.055</td><td>2.26179</td><td>630.089</td><td>8</td><td>8.87474</td></tr><tr><th>3</th><td>S310</td><td>212.972</td><td>4.95389</td><td>203.484</td><td>6.1149</td><td>1214.32</td><td>8</td><td>12.3203</td></tr><tr><th>4</th><td>S330</td><td>274.237</td><td>5.80857</td><td>289.685</td><td>3.00807</td><td>3976.98</td><td>8</td><td>22.2962</td></tr><tr><th>5</th><td>S331</td><td>272.955</td><td>7.52279</td><td>285.739</td><td>5.26602</td><td>4391.63</td><td>8</td><td>23.4298</td></tr><tr><th>6</th><td>S332</td><td>260.221</td><td>10.2321</td><td>264.252</td><td>9.56677</td><td>29666.8</td><td>8</td><td>60.8963</td></tr><tr><th>7</th><td>S333</td><td>267.847</td><td>10.3085</td><td>275.019</td><td>9.14205</td><td>1241.77</td><td>8</td><td>12.4588</td></tr><tr><th>8</th><td>S334</td><td>244.408</td><td>11.5</td><td>240.163</td><td>12.2531</td><td>3380.52</td><td>8</td><td>20.5564</td></tr><tr><th>9</th><td>S335</td><td>250.368</td><td>-0.13213</td><td>263.035</td><td>-2.88103</td><td>1037.6</td><td>8</td><td>11.3886</td></tr><tr><th>10</th><td>S337</td><td>286.071</td><td>19.0997</td><td>290.104</td><td>19.026</td><td>2130.98</td><td>8</td><td>16.3209</td></tr><tr><th>11</th><td>S349</td><td>226.847</td><td>11.5317</td><td>215.112</td><td>13.4939</td><td>1570.89</td><td>8</td><td>14.0129</td></tr><tr><th>12</th><td>S350</td><td>239.071</td><td>16.939</td><td>225.835</td><td>19.504</td><td>4747.49</td><td>8</td><td>24.3606</td></tr><tr><th>13</th><td>S351</td><td>255.679</td><td>7.51195</td><td>261.147</td><td>6.4335</td><td>4143.28</td><td>8</td><td>22.7576</td></tr><tr><th>14</th><td>S352</td><td>272.027</td><td>14.029</td><td>276.372</td><td>13.5665</td><td>5209.65</td><td>8</td><td>25.5187</td></tr><tr><th>15</th><td>S369</td><td>254.664</td><td>11.339</td><td>254.968</td><td>11.3481</td><td>2005.24</td><td>8</td><td>15.8321</td></tr><tr><th>16</th><td>S370</td><td>226.695</td><td>15.127</td><td>210.449</td><td>18.0562</td><td>4653.48</td><td>8</td><td>24.1182</td></tr><tr><th>17</th><td>S371</td><td>252.128</td><td>9.49623</td><td>253.636</td><td>9.18844</td><td>5028.91</td><td>8</td><td>25.0722</td></tr><tr><th>18</th><td>S372</td><td>263.524</td><td>11.778</td><td>267.045</td><td>11.2981</td><td>1018.63</td><td>8</td><td>11.284</td></tr></tbody></table>
+
+<p>A scatter plot of the within-subject estimates versus the predictions from the mixed-effects model shows shrinkage toward the population mean.</p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>RCall</span><span class='hljl-oB'>.</span><span class='hljl-nf'>ijulia_setdevice</span><span class='hljl-p'>(</span><span class='hljl-nf'>MIME</span><span class='hljl-p'>(</span><span class='hljl-s'>&quot;image/svg+xml&quot;</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-n'>width</span><span class='hljl-oB'>=</span><span class='hljl-ni'>6</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>height</span><span class='hljl-oB'>=</span><span class='hljl-ni'>5</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-so'>R&quot;&quot;&quot;
+p &lt;- ggplot(coefs, aes(slope, intercept)) +
+    geom_point(aes(color=&quot;Within&quot;)) +
+    geom_text(aes(label=subj), vjust=&quot;outward&quot;) +
+    geom_point(aes(days, `(Intercept)`, color=&quot;Mixed&quot;)) +
+    geom_segment(aes(xend=days, yend=`(Intercept)`),
+        arrow = arrow(length=unit(0.015, &quot;npc&quot;))) +
+    xlab(&quot;Slope w.r.t. days (ms/day)&quot;) +
+    ylab(&quot;Intercept (ms)&quot;)
+&quot;&quot;&quot;</span>
+</pre>
+
+
+<pre class="output">
+RCall.RObject&#123;RCall.VecSxp&#125;
+</pre>
+
+
+<p>For reference, we show the original data plot again.</p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>RCall</span><span class='hljl-oB'>.</span><span class='hljl-nf'>ijulia_setdevice</span><span class='hljl-p'>(</span><span class='hljl-nf'>MIME</span><span class='hljl-p'>(</span><span class='hljl-s'>&quot;image/svg+xml&quot;</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-n'>width</span><span class='hljl-oB'>=</span><span class='hljl-ni'>6</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>height</span><span class='hljl-oB'>=</span><span class='hljl-nfB'>3.5</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-so'>R&quot;xy&quot;</span>
+</pre>
+
+
+<pre class="output">
+RCall.RObject&#123;RCall.VecSxp&#125;
+</pre>
+
+
+<p>Our basic assumption is that the subjects are a random sample from the population of interest so it would make sense that they have some characteristics in common. The value of the slope and intercept from the mixed-effects model for a particular subject is a compromise between the population values &#40;i.e. the fixed effects estimates&#41; and the within-subject estimate.</p>
+<h3>Simplifying the random-effects structure</h3>
+<p>The estimate of the within-subject correlation of the random effects for slope and intercept is 0.08, indicating that it may be reasonable to model the random-effects as independent. We can fit such a model as</p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>f2</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nd'>@formula</span><span class='hljl-p'>(</span><span class='hljl-n'>reaction</span><span class='hljl-t'> </span><span class='hljl-oB'>~</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-n'>days</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-nf'>zerocorr</span><span class='hljl-p'>(</span><span class='hljl-ni'>1</span><span class='hljl-oB'>+</span><span class='hljl-n'>days</span><span class='hljl-oB'>|</span><span class='hljl-n'>subj</span><span class='hljl-p'>));</span><span class='hljl-t'>
+</span><span class='hljl-n'>m2</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>fit</span><span class='hljl-p'>(</span><span class='hljl-n'>MixedModel</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>f2</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>sleepstudy</span><span class='hljl-p'>)</span>
+</pre>
+
+
+<pre class="output">
+Linear mixed model fit by maximum likelihood
+ reaction ~ 1 &#43; days &#43; MixedModels.ZeroCorr&#40;&#40;1 &#43; days | subj&#41;&#41;
+   logLik   -2 logLik     AIC       AICc        BIC    
+  -876.0016  1752.0033  1762.0033  1762.3481  1777.9680
+
+Variance components:
+            Column   Variance Std.Dev.   Corr.
+subj     &#40;Intercept&#41;  584.2590 24.17145
+         days          33.6328  5.79938   .  
+Residual              653.1158 25.55613
+ Number of obs: 180; levels of grouping factors: 18
+
+  Fixed-effects parameters:
+──────────────────────────────────────────────────
+                Coef.  Std. Error      z  Pr&#40;&gt;|z|&#41;
+──────────────────────────────────────────────────
+&#40;Intercept&#41;  251.405      6.70771  37.48    &lt;1e-99
+days          10.4673     1.51931   6.89    &lt;1e-11
+──────────────────────────────────────────────────
+</pre>
+
+
+<p>Because model <code>m2</code> is nested within <code>m1</code>, which means that it is a special case of <code>m1</code>, we can use a likelihood ratio test to compare them.</p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>MixedModels</span><span class='hljl-oB'>.</span><span class='hljl-nf'>likelihoodratiotest</span><span class='hljl-p'>(</span><span class='hljl-n'>m2</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>m1</span><span class='hljl-p'>)</span>
+</pre>
+
+
+<pre class="output">
+Model Formulae
+1: reaction ~ 1 &#43; days &#43; MixedModels.ZeroCorr&#40;&#40;1 &#43; days | subj&#41;&#41;
+2: reaction ~ 1 &#43; days &#43; &#40;1 &#43; days | subj&#41;
+─────────────────────────────────────────────────
+     model-dof   deviance      χ²  χ²-dof  P&#40;&gt;χ²&#41;
+─────────────────────────────────────────────────
+&#91;1&#93;          5  1752.0033                        
+&#91;2&#93;          6  1751.9393  0.0639       1  0.8004
+─────────────────────────────────────────────────
+</pre>
+
+
+<p>The large p-value indicates that <code>m1</code> is not a substantially better fit than <code>m2</code> so we adopt the simpler <code>m2</code>. Also the values of AIC, BIC and AICc, where smaller is better, all prefer <code>m2</code>.</p>
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>DataFrame</span><span class='hljl-p'>(</span><span class='hljl-nf'>map</span><span class='hljl-p'>(</span><span class='hljl-n'>m</span><span class='hljl-t'> </span><span class='hljl-oB'>-&gt;</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>objective</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>objective</span><span class='hljl-p'>(</span><span class='hljl-n'>m</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-n'>AIC</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>aic</span><span class='hljl-p'>(</span><span class='hljl-n'>m</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-n'>AICc</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>aicc</span><span class='hljl-p'>(</span><span class='hljl-n'>m</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-n'>BIC</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>bic</span><span class='hljl-p'>(</span><span class='hljl-n'>m</span><span class='hljl-p'>)),</span><span class='hljl-t'> </span><span class='hljl-p'>[</span><span class='hljl-n'>m2</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>m1</span><span class='hljl-p'>]))</span>
+</pre>
+
+
+
+<table class="data-frame"><thead><tr><th></th><th>objective</th><th>AIC</th><th>AICc</th><th>BIC</th></tr><tr><th></th><th>Float64</th><th>Float64</th><th>Float64</th><th>Float64</th></tr></thead><tbody><p>2 rows × 4 columns</p><tr><th>1</th><td>1752.0</td><td>1762.0</td><td>1762.35</td><td>1777.97</td></tr><tr><th>2</th><td>1751.94</td><td>1763.94</td><td>1764.42</td><td>1783.1</td></tr></tbody></table>
+
+<h3>Properties of <code>LinearMixedModel</code></h3>
+<p>The model is saved as a <code>LinearMixedModel</code> object which has certain properties that we can extract using a &#39;.&#39; after the model&#39;s name.</p>
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>typeof</span><span class='hljl-p'>(</span><span class='hljl-n'>m1</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-nf'>propertynames</span><span class='hljl-p'>(</span><span class='hljl-n'>m1</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-n'>m1</span><span class='hljl-oB'>.</span><span class='hljl-n'>formula</span><span class='hljl-t'>
+</span><span class='hljl-n'>m1</span><span class='hljl-oB'>.</span><span class='hljl-n'>objective</span>
+</pre>
+
+
+<pre class="output">
+1751.9393444647123
+</pre>
+
+
+<h2>Creating an lmer model from a <code>LinearMixedModel</code></h2>
+<p>Phillip Alday has created the <code>JellyMe4</code> package to allow you to create an <code>lmer</code> model from a <code>LinearMixedModel</code>. Because the <code>lme4</code> package stores a <code>model.frame</code> as part of a linear mixed-effects model object, a Tuple of the model and the data frame must be passed to R. We can use the <code>&#36;</code>-interpolation technique for inserting the value of objects in strings.</p>
+
+
+<pre class='hljl'>
+<span class='hljl-so'>R&quot;summary(m1 &lt;- $(m1, sleepstudy))&quot;</span>
+</pre>
+
+
+<pre class="output">
+RCall.RObject&#123;RCall.VecSxp&#125;
+Linear mixed model fit by maximum likelihood  &#91;&#39;lmerMod&#39;&#93;
+Formula: reaction ~ 1 &#43; days &#43; &#40;1 &#43; days | subj&#41;
+   Data: jellyme4_data
+Control: lmerControl&#40;optimizer &#61; &quot;nloptwrap&quot;, optCtrl &#61; list&#40;maxeval &#61; 1&#41;, 
+ 
+    calc.derivs &#61; FALSE, check.nobs.vs.nRE &#61; &quot;warning&quot;&#41;
+
+     AIC      BIC   logLik deviance df.resid 
+  1763.9   1783.1   -876.0   1751.9      174 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-3.9416 -0.4656  0.0289  0.4636  5.1793 
+
+Random effects:
+ Groups   Name        Variance Std.Dev. Corr
+ subj     &#40;Intercept&#41; 565.51   23.780       
+          days         32.68    5.717   0.08
+ Residual             654.94   25.592       
+Number of obs: 180, groups:  subj, 18
+
+Fixed effects:
+            Estimate Std. Error t value
+&#40;Intercept&#41;  251.405      6.632  37.906
+days          10.467      1.502   6.968
+
+Correlation of Fixed Effects:
+     &#40;Intr&#41;
+days -0.138
+</pre>
+
+
+<p>Reason to move the model to R: <a href="https://github.com/lme4/lme4"><code>lme4</code> package</a> has many methods for producing plots and other diagnostics for an <code>lmerMod</code> object.</p>
+<p>For example, the <code>dotplot</code> method for the <code>ranef.mer</code> class produces a comparative plot of prediction intervals on the random effects, in increasing order by the first component.</p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>RCall</span><span class='hljl-oB'>.</span><span class='hljl-nf'>ijulia_setdevice</span><span class='hljl-p'>(</span><span class='hljl-nf'>MIME</span><span class='hljl-p'>(</span><span class='hljl-s'>&quot;image/svg+xml&quot;</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-n'>width</span><span class='hljl-oB'>=</span><span class='hljl-ni'>6</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>height</span><span class='hljl-oB'>=</span><span class='hljl-nfB'>4.5</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-so'>R&quot;&quot;&quot;
+dotplot(ranef(m1),
+    scales = list(x = list(relation = &#39;free&#39;)))[[&#39;subj&#39;]]
+&quot;&quot;&quot;</span>
+</pre>
+
+
+<pre class="output">
+RCall.RObject&#123;RCall.VecSxp&#125;
+</pre>
+
+
+<p>An alternative is a <code>qqmath</code>, or normal-probability, plot. For this plot the order of the groups is determined separately for each panel.</p>
+
+
+<pre class='hljl'>
+<span class='hljl-so'>R&quot;qqmath(ranef(m1))[[&#39;subj&#39;]]&quot;</span>
+</pre>
+
+
+<pre class="output">
+RCall.RObject&#123;RCall.VecSxp&#125;
+</pre>
+
+
+
+        <HR/>
+        <div class="footer">
+          <p>
+            Published from <a href="day1_3mixedmodels.jmd">day1_3mixedmodels.jmd</a>
+            using <a href="http://github.com/JunoLab/Weave.jl">Weave.jl</a> v0.10.6 on 2020-10-12.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BODY>
+
+</HTML>

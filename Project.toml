@@ -1,6 +1,12 @@
 name = "toy-lmm"
 authors = ["CSL"]
+
+[deps]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+DrWatson = "634d3b9d-ee7a-5ddf-bec9-22491ea816e1"
+JellyMe4 = "19ac8677-9a15-4623-9afd-84acc6165ce7"
+MixedModels = "ff71e718-51f3-5ec2-a782-8ffcbfa3c316"
+RCall = "6f49c342-dc21-5d91-9882-a32aef131414"
+
 [compat]
 julia = "1.5.1"
-[deps]
-DrWatson = "634d3b9d-ee7a-5ddf-bec9-22491ea816e1"
